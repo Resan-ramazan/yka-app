@@ -3,6 +3,7 @@ import React from 'react'
 import WelcomeHeader from '../../components/WelcomeHeader'
 import SearchBar from '../../components/SearchBar'
 import Slider from '../../components/Slider'
+import VideoCourseList from '../../components/VideoCourseList'
 
 export default function Home() {
   return (
@@ -10,6 +11,9 @@ export default function Home() {
       <WelcomeHeader/>
       <SearchBar/>
       <Slider/>
+      <VideoCourseList/>
+    
+     
     </View>
   )
 }
