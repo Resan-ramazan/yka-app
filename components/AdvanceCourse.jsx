@@ -1,15 +1,15 @@
 import { View, Text, FlatList, Image } from "react-native";
 import React from "react";
-import { courseList } from "../constants/CourseList";
+import { advance } from "../constants/AdvanceCourse";
 
-export default function CourseList({ type }) {
+export default function AdvanceCourse({ type }) {
   return (
     <View style={{marginTop:10}}>
       <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 3 }}>
         {type} Coursse
       </Text>
       <FlatList
-        data={courseList}
+        data={advance}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
