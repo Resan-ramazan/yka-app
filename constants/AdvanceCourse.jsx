@@ -5,7 +5,25 @@ export const advance = [
         description: "Explore the exciting field of Artificial Intelligence (AI) using Python, a versatile and powerful programming language. Learn to implement AI algorithms for tasks such as machine learning, neural networks, natural language processing, and computer vision. Gain hands-on experience with popular AI libraries like TensorFlow and PyTorch.",
         type: "advanced",
         topic: "Artificial Intelligence",
-        image: require("../assets/images/art.jpeg")
+        image: require("../assets/images/art.jpeg"),
+        topic: [
+            {
+                id:7,
+                topic:"Introduction",
+            },
+            {
+                id:8,
+                topic:"Getting Started",
+            },
+            {
+                id:9,
+                topic:"Python Syntax",
+            },
+            {
+                id:10,
+                topic:"Python Comments",
+            },
+        ],
     },
     {
         id: 2,
@@ -20,6 +38,14 @@ export const advance = [
             {
                 id:8,
                 topic:"Getting Started",
+            },
+            {
+                id:9,
+                topic:"Variables",
+            },
+            {
+                id:10,
+                topic:"Data Types",
             },
         ],
         image: require("../assets/images/Game.jpg")

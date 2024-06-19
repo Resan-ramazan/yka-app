@@ -3,6 +3,7 @@ import { View, Text } from "react-native";
 import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-expo";
 import LoginScreen from '../components/LoginScreen'
 
+
 import * as SecureStore from "expo-secure-store";
 
 const tokenCache = {
@@ -31,6 +32,7 @@ export default function RootLayout() {
       <SignedIn>
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="CourseDetails" />
         </Stack>
       </SignedIn>
       <SignedOut>

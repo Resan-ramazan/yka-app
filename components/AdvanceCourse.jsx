@@ -1,10 +1,15 @@
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { advance } from "../constants/AdvanceCourse";
+import { useNavigation } from "expo-router";
 
 export default function AdvanceCourse({ type }) {
+  const navigation = useNavigation();
+  const onPressCourse = (course) => {
+    navigation.navigate("CourseDetails", { courseData: course });
+  };
   return (
-    <View style={{marginTop:10}}>
+    <View style={{ marginTop: 10 }}>
       <Text style={{ fontSize: 20, fontWeight: "bold", marginBottom: 3 }}>
         {type} Coursse
       </Text>
@@ -13,7 +18,8 @@ export default function AdvanceCourse({ type }) {
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
-          <View
+          <TouchableOpacity
+            onPress={() => onPressCourse(item)}
             style={{
               backgroundColor: "#fff",
               marginRight: 10,
@@ -29,11 +35,13 @@ export default function AdvanceCourse({ type }) {
                 marginRight: 10,
               }}
             />
-            <View style={{padding:10}}>
-              <Text style={{fontWeight:"bold",fontSize:15}}>{item.name}</Text>
-              <Text style={{color:"gray"}}>{item.topic.length} Lessons</Text>
+            <View style={{ padding: 10 }}>
+              <Text style={{ fontWeight: "bold", fontSize: 15 }}>
+                {item.name}
+              </Text>
+              <Text style={{ color: "gray" }}>{item.topic.length} Lessons</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>

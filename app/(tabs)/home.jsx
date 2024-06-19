@@ -6,16 +6,19 @@ import Slider from "../../components/Slider";
 import VideoCourseList from "../../components/VideoCourseList";
 import CourseList from "../../components/CourseList";
 import AdvanceCourse from "../../components/AdvanceCourse";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function Home() {
   return (
-    <ScrollView style={{ padding: 40 }}>
-      <WelcomeHeader />
-      <SearchBar />
-      <Slider />
-      <VideoCourseList />
-      <CourseList type={"Basic"}/>
-      <AdvanceCourse type={"Advance"}/>
-    </ScrollView>
+   
+      <ScrollView style={{ padding: 40 }}>
+        <WelcomeHeader />
+        <SearchBar />
+        <Slider />
+        <VideoCourseList />
+        <CourseList  type={"Basic"} />
+        <AdvanceCourse type={"Advance"} />
+      </ScrollView>
+
   );
 }
